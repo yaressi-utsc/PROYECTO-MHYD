@@ -1,0 +1,89 @@
+:root {
+  --bg: #14121F;
+  --surface: #1F1B2E;
+  --surface-hover: #2A2440;
+  --text: #F2EFEA;
+  --text-muted: #B8B2C7;
+  --accent: #FF6B4A;
+  --accent-2: #7C8CFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+.hero {
+  padding: 5rem 1.5rem 3.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero-kicker {
+  color: var(--accent-2);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  line-height: 0.95;
+  color: var(--accent);
+}
+
+.hero-sub {
+  margin-top: 1.25rem;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 40ch;
+}
+
+.sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1.75rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover, .card:focus-visible {
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-2);
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--surface);
+}
